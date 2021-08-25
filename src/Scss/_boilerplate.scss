@@ -32,3 +32,17 @@ html{
 section{
     padding: 2rem 9%;
 }
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+
+    .box{
+        text-align: center;
+        border: var(--border);
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        padding: 4rem 2rem;
+    }
+}
