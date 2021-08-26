@@ -46,3 +46,10 @@ section{
         padding: 4rem 2rem;
     }
 }
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
