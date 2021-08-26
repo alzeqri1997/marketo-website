@@ -1,0 +1,71 @@
+.portfolio{
+    .box-container{
+
+        .box{
+            height: 30rem;
+            border-radius: .5rem;
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--box-shadow);
+            padding: 0;
+
+            &:hover .content{
+                top: 0;
+                opacity: 1;
+            }
+        
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        
+            span{
+                position: absolute;
+                top: 1rem; right: 2rem;
+                font-weight: bolder;
+                font-size: 5rem;
+                color: var(--black);
+            }
+        
+            .content{
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 6rem; left: 0;
+                transition-delay: .3s;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+        
+                h3{
+                    font-size: 2.5rem;
+                    padding-bottom: .5rem;
+                    color: var(--black);
+                }
+        
+                p{
+                    font-size: 1.5rem;
+                    color: var(--light-color);
+                }
+            }
+        
+            &::before{
+                content: '';
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0; left: 0;
+                background: #fff;
+                clip-path: circle(30% at 93% 0);
+                transition: .3s linear;
+            }
+        
+            &:hover::before{
+                clip-path: circle(100%);
+            }
+        }
+    }
+}
