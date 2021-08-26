@@ -1,3 +1,5 @@
+@use 'breakpoints' as *;
+
 .home{
     display: flex;
     align-items: center;
@@ -9,7 +11,9 @@
 
     &__content{
         flex: 1 1 45rem;
-
+        @include breakpoint(medium){
+            text-align: center;
+        }
         h3{
             font-size: 3.5rem;
             color: var(--black);
